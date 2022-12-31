@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Know Planets</string>
+    <string name="know_planets">Know Planets</string>
+    <string name="logo">logo</string>
+    <string name="logo_description">logo description</string>
+    <string name="input_planet_s_name">Input Planet\'s Name</string>
+    <string name="planet_s_name">Planet\'s Name</string>
+    <string name="planet_picture">Planet Picture</string>
+    <string name="massa">Massa:</string>
+    <string name="mass_desc">Mass Desc</string>
+    <string name="radius">Radius:</string>
+    <string name="rad_desc">Rad Desc</string>
+    <string name="period">Period:</string>
+    <string name="per_desc">Per Desc</string>
+    <string name="axis">Semi Major Axis:</string>
+    <string name="ax_desc">Ax Desc</string>
+    <string name="temperature">Temperature:</string>
+    <string name="temp_desc">Temp Desc</string>
+    <string name="distance_light_year">Distance Light Year:</string>
+    <string name="dis_desc">Dis Desc</string>
+    <string name="host_star_massa">Host Star Massa:</string>
+    <string name="hm_desc">Hm Desc</string>
+    <string name="host_star_temperature">Host Star Temperature:</string>
+    <string name="ht_desc">Ht Desc</string>
+    <string name="find">Find</string>
+</resources>

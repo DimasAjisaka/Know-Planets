@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bg"
+    tools:context=".DetailActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="?attr/bg"
+        app:layout_scrollFlags="scroll|enterAlways"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="start"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/ic_baseline_arrow_back_24"
+            android:backgroundTint="@color/material_blue"/>
+
+        <TextView
+            android:layout_width="148dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/know_planets_logo_desc"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/pict"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="68dp"
+                tools:src="@tools:sample/avatars"
+                android:contentDescription="@string/planet_picture" />
+
+            <TextView
+                android:id="@+id/planame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/pict"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="@string/planet_s_name"
+                android:textColor="@color/material_blue"
+                android:textSize="24sp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/masframe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/planame"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/mass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/massdesc"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:text="@string/massa"
+                    android:textColor="@color/material_blue"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/massdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/mass"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_medium"
+                    android:text="@string/mass_desc"
+                    android:textSize="18sp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/radframe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/masframe"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/radius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/radesc"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:text="@string/radius"
+                    android:textColor="@color/material_blue"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/radesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/radius"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_medium"
+                    android:text="@string/rad_desc"
+                    android:textSize="18sp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/perframe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/radframe"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/perdesc"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:text="@string/period"
+                    android:textColor="@color/material_blue"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/perdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/period"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_medium"
+                    android:text="@string/per_desc"
+                    android:textSize="18sp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/axframe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/perframe"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/axis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/axdesc"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:text="@string/axis"
+                    android:textColor="@color/material_blue"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/axdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/axis"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_medium"
+                    android:text="@string/ax_desc"
+                    android:textSize="18sp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tempframe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/axframe"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tempdesc"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:text="@string/temperature"
+                    android:textColor="@color/material_blue"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tempdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/temp"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_medium"
+                    android:text="@string/temp_desc"
+                    android:textSize="18sp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/disframe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tempframe"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/disdesc"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:text="@string/distance_light_year"
+                    android:textColor="@color/material_blue"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/disdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/distance"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_medium"
+                    android:text="@string/dis_desc"
+                    android:textSize="18sp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/hmframe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/disframe"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/hm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/hmdesc"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:text="@string/host_star_massa"
+                    android:textColor="@color/material_blue"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/hmdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/hm"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_medium"
+                    android:text="@string/hm_desc"
+                    android:textSize="18sp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/htframe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/hmframe"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/ht"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/htdesc"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:text="@string/host_star_temperature"
+                    android:textColor="@color/material_blue"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/htdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ht"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/product_sans_medium"
+                    android:text="@string/ht_desc"
+                    android:textSize="18sp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
