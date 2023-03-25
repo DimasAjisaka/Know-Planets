@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.example.knowplanets.databinding.ActivityDetailBinding
 import com.example.knowplanets.response.PlanetResponse
 
+@Suppress("DEPRECATION")
 class DetailActivity : AppCompatActivity() {
     private var _binding: ActivityDetailBinding? = null
     private val binding get() = _binding!!
